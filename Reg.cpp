@@ -3,3 +3,13 @@
 //
 
 #include "Reg.h"
+
+void Reg::reset() {
+    used = 0;
+    content = "";
+}
+
+Reg::Reg() {
+    used = 0;
+    content = "";
+}

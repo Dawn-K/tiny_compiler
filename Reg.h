@@ -17,10 +17,9 @@ public:
     bool used;
     string content;
 
-    Reg() {
-        used = 0;
-        content = "";
-    }
+    Reg();
+
+    void reset();
 
 };
 

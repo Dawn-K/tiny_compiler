@@ -9,9 +9,11 @@
 #include <string>
 #include <map>
 #include <vector>
+#include <queue>
 #include "Reg.h"
 #include "Ava.h"
 #include "Tack.h"
+#include "Quta.h"
 
 using namespace std;
 
@@ -23,6 +25,8 @@ private:
     vector<string> assCode;
 
     bool isdigit(string var);
+
+    void resetReg();
 
 public:
     Store() {
@@ -42,11 +46,27 @@ public:
 
     void genMov(string var1, string var2);
 
+    void genAddSub(Quat q, string func);
+
+    void genMulDix(Quat q, string func);
+
+    string findEmptyReg(string var);
+
     string applyReg(string var);
 
     string varToReg(string var);
 
     string conToReg(string con);
+
+    void showReg();
+
+    void showCode();
+
+    void showAva();
+
+    void Test();
+
+    void refreshAva(int id);
 };
 
 #endif //COMPLIER_TEST_STORE_H

@@ -10,7 +10,7 @@
 #include <map>
 #include <vector>
 #include <stack>
-
+#include <queue>
 using namespace std;
 
 // todo : 还需进一步完善此栈

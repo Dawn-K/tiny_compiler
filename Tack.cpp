@@ -5,7 +5,7 @@
 #include "Tack.h"
 
 Tack::Tack() {
-    top = -1;
+    top = -2;
     while (!stk.empty()) {
         stk.pop();
     }

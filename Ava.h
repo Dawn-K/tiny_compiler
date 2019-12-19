@@ -9,6 +9,7 @@
 #include <string>
 #include <map>
 #include <vector>
+#include <queue>
 
 using namespace std;
 
@@ -17,18 +18,22 @@ private:
 
 public:
     string reg, mem;
-    vector<int> vlist;
+    queue<int> vlist;
 
     Ava() {
         reg = "";
         mem = "";
-        vlist.clear();
+        while (!vlist.empty()) {
+            vlist.pop();
+        }
     }
 
     Ava(const string &_mem) {
         reg = "";
         mem = "[" + _mem + "]";
-        vlist.clear();
+        while (!vlist.empty()) {
+            vlist.pop();
+        }
     }
 };
 
